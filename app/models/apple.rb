@@ -5,4 +5,6 @@ class Apple < ApplicationRecord
 
   # Validations
 
+  validates :name, :presence => true
+
 end
