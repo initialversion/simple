@@ -1,6 +1,6 @@
 class ApplesController < ApplicationController
   def index
-    @apples = Apple.all
+    @apples = Apple.page(params[:page]).per(10)
 
     render("apples/index.html.erb")
   end
