@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root :to => "apples#index"
   # Routes for the Apple resource:
   # CREATE
