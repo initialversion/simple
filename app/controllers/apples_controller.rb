@@ -1,6 +1,7 @@
 class ApplesController < ApplicationController
   def index
-    @apples = Apple.page(params[:page]).per(10)
+    @q = Apple.ransack(params[:q])
+    @apples = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("apples/index.html.erb")
   end
