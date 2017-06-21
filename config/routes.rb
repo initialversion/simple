@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "apples#index"
   # Routes for the Apple resource:
   # CREATE
   get "/apples/new", :controller => "apples", :action => "new"
